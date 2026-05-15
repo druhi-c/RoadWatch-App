@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark_slate">#12151A</color>
+    <color name="card_surface">#1E232A</color>
+    <color name="mint_green">#25C19A</color>
+    <color name="coral_red">#FC5C65</color>
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_muted">#888888</color>
+    <color name="text_primary">#FFFFFF</color>
+</resources>

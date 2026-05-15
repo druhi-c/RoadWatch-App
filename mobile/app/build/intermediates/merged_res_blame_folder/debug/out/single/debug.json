@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.roadwatch.mobile.app-merged_res-4:/layout_activity_main.xml.flat",
+        "source": "com.roadwatch.mobile.app-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.roadwatch.mobile.app-merged_res-4:/anim_pulse.xml.flat",
+        "source": "com.roadwatch.mobile.app-main-6:/anim/pulse.xml"
+    },
+    {
+        "merged": "com.roadwatch.mobile.app-merged_res-4:/layout_item_recent_capture.xml.flat",
+        "source": "com.roadwatch.mobile.app-main-6:/layout/item_recent_capture.xml"
+    },
+    {
+        "merged": "com.roadwatch.mobile.app-merged_res-4:/layout_activity_complaint.xml.flat",
+        "source": "com.roadwatch.mobile.app-main-6:/layout/activity_complaint.xml"
+    },
+    {
+        "merged": "com.roadwatch.mobile.app-merged_res-4:/drawable_bg_gradient.xml.flat",
+        "source": "com.roadwatch.mobile.app-main-6:/drawable/bg_gradient.xml"
+    },
+    {
+        "merged": "com.roadwatch.mobile.app-merged_res-4:/drawable_shutter_ring.xml.flat",
+        "source": "com.roadwatch.mobile.app-main-6:/drawable/shutter_ring.xml"
+    },
+    {
+        "merged": "com.roadwatch.mobile.app-merged_res-4:/drawable_shutter_button.xml.flat",
+        "source": "com.roadwatch.mobile.app-main-6:/drawable/shutter_button.xml"
+    }
+]

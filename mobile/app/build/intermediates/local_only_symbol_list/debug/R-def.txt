@@ -1,0 +1,31 @@
+R_DEF: Internal format may change without notice
+local
+anim pulse
+color bg_dark_slate
+color card_surface
+color coral_red
+color mint_green
+color text_light
+color text_muted
+color text_primary
+drawable bg_gradient
+drawable shutter_button
+drawable shutter_ring
+id bottomNav
+id captureButton
+id heroNumber
+id heroTitle
+id iconContainer
+id ivIcon
+id reportDefectButton
+id rvRecentCaptures
+id syncStatusText
+id topBar
+id tvSubtitle
+id tvTitle
+id viewFinder
+layout activity_complaint
+layout activity_main
+layout item_recent_capture
+style Circular
+style Theme.RoadWatch

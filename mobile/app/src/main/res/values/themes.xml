@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.RoadWatch" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/mint_green</item>
+        <item name="colorOnPrimary">@color/text_light</item>
+        <item name="colorSecondary">@color/coral_red</item>
+        <item name="colorOnSecondary">@color/text_light</item>
+        <item name="android:colorBackground">@color/bg_dark_slate</item>
+        <item name="colorSurface">@color/card_surface</item>
+        <item name="colorOnSurface">@color/text_light</item>
+        <item name="colorOnBackground">@color/text_light</item>
+        <item name="android:textColorPrimary">@color/text_light</item>
+        <item name="android:textColorSecondary">@color/text_muted</item>
+    </style>
+    
+    <style name="Circular" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

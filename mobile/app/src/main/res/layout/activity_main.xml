@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark_slate">
+
+    <!-- Custom Top App Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent">
+        
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="#333333">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_camera"
+                app:tint="@color/text_light"
+                android:scaleType="centerInside" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Hi, Patrol Officer"
+            android:textColor="@color/text_light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@android:drawable/ic_popup_reminder"
+            app:tint="@color/text_light" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- The 'Hero' Stats Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/mint_green"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="32dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+                    
+                    <TextView
+                        android:id="@+id/heroTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Reports"
+                        android:textColor="#E0FFFFFF"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/heroNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textColor="@color/text_light"
+                        android:textSize="48sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/heroTitle"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <!-- Pill-shaped Sync Status -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#33FFFFFF"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <TextView
+                            android:id="@+id/syncStatusText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="8dp"
+                            android:text="All Synced"
+                            android:textColor="@color/text_light"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Lower Section: Recent Activity -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent Captures"
+                android:textColor="@color/text_light"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Dynamic Recent Captures List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecentCaptures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="16dp" />
+            
+            <View android:layout_width="match_parent" android:layout_height="100dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Fake Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#151A20"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        
+        <ImageView android:layout_width="0dp" android:layout_weight="1" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="@color/mint_green" />
+        <ImageView android:layout_width="0dp" android:layout_weight="1" android:layout_height="24dp" android:src="@android:drawable/ic_menu_mapmode" app:tint="@color/text_muted" />
+        <View android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" /> <!-- Empty space for FAB -->
+        <ImageView android:layout_width="0dp" android:layout_weight="1" android:layout_height="24dp" android:src="@android:drawable/ic_menu_gallery" app:tint="@color/text_muted" />
+        <ImageView android:layout_width="0dp" android:layout_weight="1" android:layout_height="24dp" android:src="@android:drawable/ic_menu_manage" app:tint="@color/text_muted" />
+    </LinearLayout>
+
+    <!-- Floating Circular Button -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/reportDefectButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:icon="@android:drawable/ic_menu_add"
+        app:iconTint="@color/text_light"
+        app:iconPadding="0dp"
+        app:backgroundTint="@color/coral_red"
+        app:shapeAppearanceOverlay="@style/Circular"
+        android:contentDescription="Report Defect"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="-32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
